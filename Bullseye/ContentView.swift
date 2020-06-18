@@ -14,9 +14,21 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to my app!")
-                .fontWeight(.semibold)
-                .foregroundColor(Color.gray)
+            Spacer()
+            // target row
+            HStack {
+                Text("Put the bullseye as close as you can to:")
+                Text(/*@START_MENU_TOKEN@*/"100"/*@END_MENU_TOKEN@*/)
+            }
+            Spacer()
+            // slider row
+            HStack {
+                Text("1")
+                Slider(value: .constant(10))
+                Text("100")
+            }
+            Spacer()
+            // button row
             Button(action: {
                 print("Button pressed!")
                 self.alertIsVisible = true
@@ -29,12 +41,31 @@ struct ContentView: View {
                              message: Text("This is my first pop-up."),
                              dismissButton: .default(Text("Awesome")))
             }
+            Spacer()
+            //score row
+            HStack {
+                Button(action: {}) {
+                    Text("Start Over")
+                }
+                Spacer()
+                Text("Score:")
+                Text("999999")
+                Spacer()
+                Text("Round:")
+                Text("999")
+                Spacer()
+                Button(action: {}) {
+                    Text("Info")
+                }
+            }
+            .padding(.bottom, 20)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().previewLayout(
+            .fixed(width: 896, height: 414))
     }
 }
