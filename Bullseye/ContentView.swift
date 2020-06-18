@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var alertIsVisible: Bool = false
+    @State var sliderValue: Double = 50.0
+    @State var target: Int = Int.random(in: 1...100)
     
     var body: some View {
         VStack {
@@ -18,13 +20,13 @@ struct ContentView: View {
             // target row
             HStack {
                 Text("Put the bullseye as close as you can to:")
-                Text(/*@START_MENU_TOKEN@*/"100"/*@END_MENU_TOKEN@*/)
+                Text("\(self.target)")
             }
             Spacer()
             // slider row
             HStack {
                 Text("1")
-                Slider(value: .constant(10))
+                Slider(value: self.$sliderValue, in: 1...100)
                 Text("100")
             }
             Spacer()
@@ -37,8 +39,9 @@ struct ContentView: View {
             }
             .alert(isPresented: $alertIsVisible) { () ->
                 Alert in
+                let roundedValue: Int = Int(self.sliderValue.rounded())
                 return Alert(title: Text("Hello there!"),
-                             message: Text("This is my first pop-up."),
+                             message: Text("The slider's value is \(roundedValue)."),
                              dismissButton: .default(Text("Awesome")))
             }
             Spacer()
