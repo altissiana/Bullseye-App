@@ -72,12 +72,12 @@ struct ContentView: View {
             }
             .padding(.bottom, 20)
         }
+        .background(Image("Background"), alignment: .center)
     }
     
     func sliderValueRounded() -> Int {
         Int(sliderValue.rounded())
     }
-    
     func amountOff() -> Int {
         abs(target - sliderValueRounded())
     }
