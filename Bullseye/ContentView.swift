@@ -22,14 +22,23 @@ struct ContentView: View {
             // target row
             HStack {
                 Text("Put the bullseye as close as you can to:")
+                    .foregroundColor(Color.white)
+                    .shadow(color: Color.gray, radius: 5, x: 2, y: 2)
+                    .font(Font.custom("Arial Rounded MT Bold", size: 20))
                 Text("\(target)")
             }
             Spacer()
             // slider row
             HStack {
                 Text("1")
+                .foregroundColor(Color.white)
+                .shadow(color: Color.gray, radius: 5, x: 2, y: 2)
+                .font(Font.custom("Arial Rounded MT Bold", size: 20))
                 Slider(value: $sliderValue, in: 1...100)
                 Text("100")
+                .foregroundColor(Color.white)
+                .shadow(color: Color.gray, radius: 5, x: 2, y: 2)
+                .font(Font.custom("Arial Rounded MT Bold", size: 20))
             }
             Spacer()
             // button row
