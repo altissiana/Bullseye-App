@@ -13,6 +13,7 @@
 		D3B98936249ABC7300C32F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B98935249ABC7300C32F7F /* Assets.xcassets */; };
 		D3B98939249ABC7300C32F7F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B98938249ABC7300C32F7F /* Preview Assets.xcassets */; };
 		D3B9893C249ABC7300C32F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B9893A249ABC7300C32F7F /* LaunchScreen.storyboard */; };
+		D3CC4E68249D2BBA0080CDFE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC4E67249D2BBA0080CDFE /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D3B98938249ABC7300C32F7F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3B9893B249ABC7300C32F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3B9893D249ABC7300C32F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CC4E67249D2BBA0080CDFE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D3B9892F249ABC7200C32F7F /* AppDelegate.swift */,
 				D3B98931249ABC7200C32F7F /* SceneDelegate.swift */,
 				D3B98933249ABC7200C32F7F /* ContentView.swift */,
+				D3CC4E67249D2BBA0080CDFE /* AboutView.swift */,
 				D3B98935249ABC7300C32F7F /* Assets.xcassets */,
 				D3B9893A249ABC7300C32F7F /* LaunchScreen.storyboard */,
 				D3B9893D249ABC7300C32F7F /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CC4E68249D2BBA0080CDFE /* AboutView.swift in Sources */,
 				D3B98930249ABC7200C32F7F /* AppDelegate.swift in Sources */,
 				D3B98932249ABC7200C32F7F /* SceneDelegate.swift in Sources */,
 				D3B98934249ABC7200C32F7F /* ContentView.swift in Sources */,
@@ -295,6 +299,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tissianaalves.Bullseye;
 				PRODUCT_NAME = "Zen Target";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tissianaalves.Bullseye;
 				PRODUCT_NAME = "Zen Target";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
