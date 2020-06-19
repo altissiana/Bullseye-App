@@ -10,6 +10,8 @@ import SwiftUI
 
 struct AboutView: View {
     
+    let purplehaze = Color(red: 125.0 / 255.0, green: 112.0 / 255.0, blue: 152.0 / 255.0)
+    
     struct AboutHeadingStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
@@ -20,14 +22,30 @@ struct AboutView: View {
         }
     }
     
-    var body: some View {
-        VStack {
-            Text("🦋 Zen Target 🦋")
-            Text("This is Zen Target, the game where you can win points by dragging a slider.")
-            Text("Your goal is to place the slider as close as possible to the target. The closer you are, the more points you score.")
-            Text("Enjoy!")
+    struct AboutBodyStyle: ViewModifier {
+        func body(content: Content) -> some View {
+            return content
+                .foregroundColor(Color.black)
+                .font(Font.custom("Arial Rounded MT Bold", size: 16))
+                .padding(.leading, 60)
+                .padding(.trailing, 60)
+                .padding(.bottom, 20)
+                .listStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=List Style@*/DefaultListStyle()/*@END_MENU_TOKEN@*/)
         }
-        .navigationBarTitle("About Zen Target")
+    }
+    
+    var body: some View {
+        Group {
+            VStack {
+                Text("🦋 Zen Target 🦋").modifier(AboutHeadingStyle())
+                Text("This is Zen Target, the game where you can win points by dragging a slider.").modifier(AboutBodyStyle())
+                Text("Your goal is to place the slider as close as possible to the target. The closer you are, the more points you score.").modifier(AboutBodyStyle()).multilineTextAlignment(.center)
+                Text("Enjoy!").modifier(AboutBodyStyle())
+            }
+            .navigationBarTitle("About Zen Target")
+            .background(purplehaze)
+        }
+    .background(Image("Background"))
     }
 }
 
