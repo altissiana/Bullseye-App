@@ -16,6 +16,8 @@ struct ContentView: View {
     @State var score = 0
     @State var round = 1
     
+   
+    
     struct LabelStyle: ViewModifier {
         func body(content: Content) -> some View {
             return content
@@ -104,15 +106,14 @@ struct ContentView: View {
                 Spacer()
                 NavigationLink(destination: AboutView()) {
                 HStack {
-                        Text("Info").modifier(ButtonSmallTextStyle())
+                    Text("Info").modifier(ButtonSmallTextStyle())
                     }
                 }
                 .background(Image("Button"))
             }
-            .padding(.bottom, 20)
+            .padding(.bottom, 20).padding(.trailing,25)
         }
         .background(Image("Background"), alignment: .center)
-        .navigationBarTitle("Zen Target")
     }
     
     func sliderValueRounded() -> Int {

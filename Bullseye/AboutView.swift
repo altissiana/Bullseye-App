@@ -42,7 +42,6 @@ struct AboutView: View {
                 Text("Your goal is to place the slider as close as possible to the target. The closer you are, the more points you score.").modifier(AboutBodyStyle()).multilineTextAlignment(.center)
                 Text("Enjoy!").modifier(AboutBodyStyle())
             }
-            .navigationBarTitle("About Zen Target")
             .background(purplehaze)
         }
     .background(Image("Background"))
